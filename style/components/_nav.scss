@@ -1,0 +1,137 @@
+nav{
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 35vh;
+
+    background: url(./../../images/image-hero-mobile.jpg) no-repeat;
+    background-size: 100%;
+
+    .nav-container{
+        background: linear-gradient(to top, #ffffff00 40%, #000000 100%);
+        height: 100%;
+    }
+    
+
+    .navbar-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+
+
+
+        // For Laptop or higher width screen
+        .laptop{
+            display: none;
+        }
+
+        // For tablet or mobile width screen
+        .mobile-link{
+            position: absolute;
+            display: none;
+            background-color: $white;
+            bottom: 0;
+            left: 50%;
+            top: 4rem;
+            width: 390px;
+            transform: translateX(-50%);
+            border-radius: 15px;
+            flex-direction: column;
+            transition: all .50s ease-in-out;
+
+
+
+            li{
+                flex: 1;
+                padding: 1rem;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                font-size: 1.3rem;
+                font-weight: 500;
+
+                &:hover{
+                    transition: all .20s ease;
+                    cursor: pointer;
+                    background-color: $Moderatecyan;
+                    color: $white;
+                }
+
+                &:nth-child(1){
+                    border-bottom: 1px solid $ligthgray;
+                    &:hover{
+                        border-radius: 15px 15px 0 0;
+                    }
+                }
+
+                &:nth-child(2){
+                    border-bottom: 1px solid $ligthgray;
+                }
+
+                &:nth-child(3){
+                    &:hover{
+                        border-radius: 0 0 15px 15px;
+                    }
+                }
+                
+            }
+        }
+
+        .active{
+            display: flex;
+            animation: slideDown .50s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from{
+                top: -1000px;
+                bottom: 1000px;
+            }
+            to{
+                top: 4rem;
+                bottom: 0;
+            }
+        }
+
+
+        .btn-hamburger-menu{
+            .open-menu{
+                z-index: 1;
+                transition: all .20s ease;
+                animation: rotational .30s ease;
+                &:hover{
+                    cursor: pointer;
+                    opacity: .8;
+                }
+               
+            }
+            .close-menu{
+                display: none;
+            }
+
+            .active-hide{
+                display: none;
+                animation: rotational .50s ease;
+            }
+            
+            .active-show{
+                z-index: 1;
+                display: flex;
+                animation: rotational .50s ease;
+            }
+            
+            @keyframes rotational {
+                from{
+                    transform: rotate(0);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+    }
+}
+
+
