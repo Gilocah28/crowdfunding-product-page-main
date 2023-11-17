@@ -15,8 +15,16 @@ nav {
   width: 100%;
   max-width: 1440px;
   height: 35vh;
+  margin: 0 auto;
   background: url(./../../images/image-hero-mobile.jpg) no-repeat;
   background-size: 100%;
+}
+@media screen and (min-width: 768px) {
+  nav {
+    background: url(./../../images/image-hero-desktop.jpg) no-repeat;
+    background-size: cover;
+    height: 350px;
+  }
 }
 nav .nav-container {
   background: linear-gradient(to top, rgba(255, 255, 255, 0) 40%, #000000 100%);
@@ -28,8 +36,30 @@ nav .navbar-container {
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+@media screen and (min-width: 768px) {
+  nav .navbar-container {
+    max-width: 1200px;
+    padding-top: 3rem;
+    margin: 0 auto;
+  }
+}
 nav .navbar-container .laptop {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  nav .navbar-container .laptop {
+    display: flex;
+    color: hsl(0, 0%, 100%);
+    gap: 2rem;
+  }
+  nav .navbar-container .laptop li {
+    list-style: none;
+  }
+  nav .navbar-container .laptop:hover {
+    transition: all 0.2s linear;
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 nav .navbar-container .mobile-link {
   position: absolute;
@@ -43,6 +73,11 @@ nav .navbar-container .mobile-link {
   border-radius: 15px;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  nav .navbar-container .mobile-link {
+    display: none;
+  }
 }
 nav .navbar-container .mobile-link li {
   flex: 1;
@@ -75,6 +110,11 @@ nav .navbar-container .active {
   display: flex;
   animation: slideDown 0.5s ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  nav .navbar-container .active {
+    display: none;
+  }
+}
 @keyframes slideDown {
   from {
     top: -1000px;
@@ -83,6 +123,11 @@ nav .navbar-container .active {
   to {
     top: 4rem;
     bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav .navbar-container .btn-hamburger-menu {
+    display: none;
   }
 }
 nav .navbar-container .btn-hamburger-menu .open-menu {
@@ -101,10 +146,20 @@ nav .navbar-container .btn-hamburger-menu .active-hide {
   display: none;
   animation: rotational 0.5s ease;
 }
+@media screen and (min-width: 768px) {
+  nav .navbar-container .btn-hamburger-menu .active-hide {
+    display: none;
+  }
+}
 nav .navbar-container .btn-hamburger-menu .active-show {
   z-index: 1;
   display: flex;
   animation: rotational 0.5s ease;
+}
+@media screen and (min-width: 768px) {
+  nav .navbar-container .btn-hamburger-menu .active-show {
+    display: none;
+  }
 }
 @keyframes rotational {
   from {

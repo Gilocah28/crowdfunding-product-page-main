@@ -3,9 +3,16 @@ nav{
     width: 100%;
     max-width: 1440px;
     height: 35vh;
+    margin: 0 auto;
 
     background: url(./../../images/image-hero-mobile.jpg) no-repeat;
     background-size: 100%;
+
+    @include laptop{
+        background: url(./../../images/image-hero-desktop.jpg) no-repeat;
+        background-size: cover;
+        height: 350px;
+    }
 
     .nav-container{
         background: linear-gradient(to top, #ffffff00 40%, #000000 100%);
@@ -19,12 +26,37 @@ nav{
         justify-content: space-between;
         padding: 1rem 2rem;
 
+        @include laptop{
+            max-width: 1200px;
+            padding-top: 3rem;
+            margin: 0 auto;
+        }
+
 
 
         // For Laptop or higher width screen
         .laptop{
             display: none;
+
+            @include laptop{
+                display: flex;
+                color: $white;
+                gap: 2rem;
+                li{
+                    list-style: none;
+                }
+
+                &:hover{
+                    transition: all .20s linear;
+                    cursor: pointer;
+                    opacity: .8;
+                }
+            }
         }
+
+
+
+
 
         // For tablet or mobile width screen
         .mobile-link{
@@ -39,6 +71,10 @@ nav{
             border-radius: 15px;
             flex-direction: column;
             transition: all .50s ease-in-out;
+
+            @include laptop{
+                display: none;
+            }
 
 
 
@@ -81,6 +117,9 @@ nav{
         .active{
             display: flex;
             animation: slideDown .50s ease-in-out;
+            @include laptop{
+                display: none;
+            }
         }
 
         @keyframes slideDown {
@@ -96,10 +135,17 @@ nav{
 
 
         .btn-hamburger-menu{
+
+            @include laptop{
+                display: none;
+            }
+
             .open-menu{
                 z-index: 1;
                 transition: all .20s ease;
                 animation: rotational .30s ease;
+
+
                 &:hover{
                     cursor: pointer;
                     opacity: .8;
@@ -113,12 +159,20 @@ nav{
             .active-hide{
                 display: none;
                 animation: rotational .50s ease;
+                @include laptop{
+                    display: none;
+                }
+
             }
             
             .active-show{
                 z-index: 1;
                 display: flex;
                 animation: rotational .50s ease;
+                @include laptop{
+                    display: none;
+                }
+
             }
             
             @keyframes rotational {
