@@ -20,5 +20,11 @@ body{
 a{
     text-decoration: none;
     color: black;
+    &:hover{
+        transition: all .20s ease;
+        cursor: pointer;
+        background-color: $Moderatecyan;
+        color: $white;
+    }
 }
 
