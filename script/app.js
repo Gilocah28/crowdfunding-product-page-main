@@ -26,3 +26,15 @@ aboutMobilebtn.addEventListener('click',()=>{
     navMobile.classList.toggle('active')
     blur1.classList.remove('blur')
 })
+
+
+const btnproject = document.querySelector('.thisProject')
+const projectContainer = document.querySelector('.project-container')
+btnproject.addEventListener('click',()=>{
+    projectContainer.style.display = 'flex';
+    blur1.classList.toggle('blur2')
+})
+document.getElementById('close').addEventListener('click',()=>{
+    projectContainer.style.display = 'none';
+    blur1.classList.remove('blur2')
+})

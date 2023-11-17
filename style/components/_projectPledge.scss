@@ -1,0 +1,278 @@
+.project-container {
+
+    position: absolute;
+    width: 90%;
+    background-color: $white;
+    z-index: 3;
+    padding: 1.5rem;
+    max-width: 700px;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
+
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    animation: fade .20s linear;
+    transition: all .20s linear;
+
+    @include laptop{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    @keyframes fade {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .back-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fa-xmark{
+            font-size:1.5rem;
+            font-weight: 900;
+            
+            &:hover{
+                transition: all .20s linear;
+                cursor: pointer;
+                opacity: .7;
+            }
+
+        }
+        
+    }
+
+    .top-text{
+        font-weight: 500;
+        line-height: 1.8rem;
+        color: $Darkgray;
+    }
+
+    .back-project-container{
+        border: 1px solid $ligthgray;
+        padding: 1.5rem;
+        border-radius: 10px;
+
+        .radio-container{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            h3{
+                font-size: 1rem;
+                letter-spacing: 1px;
+                &:hover{
+                    transition: all .20s linear;
+                    cursor: pointer;
+                    color: $Darkcyan;
+                }
+            }
+        }
+
+        p{
+            color: $Darkgray;
+            line-height: 1.8rem;
+        }
+
+        .content{
+            
+            .radio-container-flex{
+               display: flex;
+               align-items: center;
+               margin-bottom: 2rem;
+
+               @include laptop{
+                justify-content: space-between;
+               }
+
+               .radio{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                p{
+                    color: $Moderatecyan;
+                }
+               }
+
+               .p-hide{
+                display: none;
+
+                @include laptop{
+                    display: flex;
+                    color: $Black;
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                    display: flex;
+                    gap: .5rem;
+                    align-items: center;
+                    span{
+                        font-weight: 300;
+                        color: $Darkgray;
+                        font-size: 1rem;
+                    }
+                }
+               }
+            }
+
+            .last-text{
+                font-weight: 700;
+                font-size: 1.5rem;
+                display: flex;
+                gap: 1rem;
+                color: $Black;
+                margin-top: 1rem;
+                @include laptop{
+                    display: none;
+                }
+
+                span{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $Darkgray;
+                }
+            }
+        }
+
+        
+        .pledge-count{
+            margin-top: 1rem;
+            // display: flex;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            border-top: 1px solid $ligthgray;
+
+            p{
+                margin: 1.5rem 0;
+            }
+            
+            .pledge-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: 1rem;
+
+                input{
+                    width: 50%;
+                    padding: 1rem;
+                    border-radius: 25px;
+                    border: 1px solid $ligthgray;
+                    outline: none;
+                }
+                
+                .continue{
+                    flex: 1;
+                    padding: 1rem;
+                    border-radius: 25px;
+                    border: none;
+                    color: $white;
+                    font-family: inherit;
+                    font-size: 1rem;
+                    background: $Moderatecyan;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+    }
+}
+
+.Custom-radio-btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid $ligthgray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .checkmark{
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background-color: $Moderatecyan;
+        border-radius: 50%;
+        display: none;
+    }
+    input{
+        display: none;
+    }
+
+    input:checked + .checkmark{
+        display: inline-block;
+    }
+}
+
+.thankyou-container{
+    display: none;
+    position: absolute;
+    background: $white;
+    width: 90%;
+    max-width: 500px;
+    top: 14rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem;
+    text-align: center;
+
+    h2{
+        margin: 2rem 0;
+    }
+
+    p{
+        color: $Darkgray;
+        line-height: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .gotIt{
+        padding: 1rem 2.5rem;
+        color: $white;
+        font-weight: 700;
+        border: none;
+        border-radius: 25px;
+
+        background-color: $Moderatecyan;
+        margin-bottom: 2rem;
+
+        &:hover{
+            transition: all .20s linear;
+            cursor: pointer;
+            background-color: $Darkcyan;
+        }
+    }
+}
+
+.text-container-project{
+    h3{
+        display: none;
+        cursor: pointer;
+        &:hover{
+            transition: all .20s linear;
+            color: $Darkcyan;
+        }
+    }
+    @include laptop{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

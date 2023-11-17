@@ -472,7 +472,7 @@ nav .navbar-container .btn-hamburger-menu .active-show {
 .blur1 {
   display: none;
   position: absolute;
-  background: rgba(0, 0, 0, 0.233);
+  background: rgba(0, 0, 0, 0.514);
   z-index: 2;
   width: 100%;
   height: 100%;
@@ -493,6 +493,265 @@ nav .navbar-container .btn-hamburger-menu .active-show {
 }
 @media screen and (min-width: 768px) {
   .blur {
+    top: 3rem;
+  }
+}
+
+.blur2 {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .blur2 {
+    top: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.233);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.project-container {
+  position: absolute;
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 3;
+  padding: 1.5rem;
+  max-width: 700px;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fade 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media screen and (min-width: 768px) {
+  .project-container {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.project-container .back-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-container .back-container .fa-xmark {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.project-container .back-container .fa-xmark:hover {
+  transition: all 0.2s linear;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.project-container .top-text {
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: hsl(0, 0%, 48%);
+}
+.project-container .back-project-container {
+  border: 1px solid hsl(0, 0%, 83%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.project-container .back-project-container .radio-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.project-container .back-project-container .radio-container h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.project-container .back-project-container .radio-container h3:hover {
+  transition: all 0.2s linear;
+  cursor: pointer;
+  color: hsl(176, 72%, 28%);
+}
+.project-container .back-project-container p {
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8rem;
+}
+.project-container .back-project-container .content .radio-container-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .content .radio-container-flex {
+    justify-content: space-between;
+  }
+}
+.project-container .back-project-container .content .radio-container-flex .radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.project-container .back-project-container .content .radio-container-flex .radio p {
+  color: hsl(176, 50%, 47%);
+}
+.project-container .back-project-container .content .radio-container-flex .p-hide {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .content .radio-container-flex .p-hide {
+    display: flex;
+    color: hsl(0, 0%, 0%);
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .project-container .back-project-container .content .radio-container-flex .p-hide span {
+    font-weight: 300;
+    color: hsl(0, 0%, 48%);
+    font-size: 1rem;
+  }
+}
+.project-container .back-project-container .content .last-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  color: hsl(0, 0%, 0%);
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .content .last-text {
     display: none;
+  }
+}
+.project-container .back-project-container .content .last-text span {
+  font-size: 1rem;
+  font-weight: 300;
+  color: hsl(0, 0%, 48%);
+}
+.project-container .back-project-container .pledge-count {
+  margin-top: 1rem;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid hsl(0, 0%, 83%);
+}
+.project-container .back-project-container .pledge-count p {
+  margin: 1.5rem 0;
+}
+.project-container .back-project-container .pledge-count .pledge-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.project-container .back-project-container .pledge-count .pledge-container input {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 25px;
+  border: 1px solid hsl(0, 0%, 83%);
+  outline: none;
+}
+.project-container .back-project-container .pledge-count .pledge-container .continue {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-family: inherit;
+  font-size: 1rem;
+  background: hsl(176, 50%, 47%);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.Custom-radio-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(0, 0%, 83%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Custom-radio-btn .checkmark {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50%;
+  display: none;
+}
+.Custom-radio-btn input {
+  display: none;
+}
+.Custom-radio-btn input:checked + .checkmark {
+  display: inline-block;
+}
+
+.thankyou-container {
+  display: none;
+  position: absolute;
+  background: hsl(0, 0%, 100%);
+  width: 90%;
+  max-width: 500px;
+  top: 14rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  text-align: center;
+}
+.thankyou-container h2 {
+  margin: 2rem 0;
+}
+.thankyou-container p {
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+.thankyou-container .gotIt {
+  padding: 1rem 2.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  background-color: hsl(176, 50%, 47%);
+  margin-bottom: 2rem;
+}
+.thankyou-container .gotIt:hover {
+  transition: all 0.2s linear;
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
+
+.text-container-project h3 {
+  display: none;
+  cursor: pointer;
+}
+.text-container-project h3:hover {
+  transition: all 0.2s linear;
+  color: hsl(176, 72%, 28%);
+}
+@media screen and (min-width: 768px) {
+  .text-container-project {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
