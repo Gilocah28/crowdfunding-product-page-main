@@ -1,0 +1,341 @@
+
+
+.main-content-container{
+    width: 90%;
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    .top-container{
+        position: relative;
+        margin-top: -4rem;
+        @include borderR-container();
+        text-align: center;
+        
+        .logo-about{
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2{
+            margin-inline:auto;
+            margin-top: 2.5rem;
+            width: 70%;
+        }
+
+        p{
+            margin-top: 1.5rem;
+            line-height: 2rem;
+            color: $Darkgray;
+        }
+
+        .bookmark-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+
+            .bookmark-div{
+                img{
+                    cursor: pointer;
+                }
+                @include laptop{
+                    
+                    p{
+                        &:hover{
+                            cursor: pointer;
+                            color: $white;
+                        }
+                        
+                    }
+                }
+                
+                @include laptop{
+                    background-color:rgb(233, 233, 233);
+                    display: flex;
+                    border-radius: 30px;
+                    width: 30%;
+                    &:hover{
+                        color: $white;
+                        cursor: pointer;
+                        background-color: $Darkcyan;
+                    }
+                   
+                }
+
+                .book-text{  
+                    display: none;
+                    @include laptop{     
+                        display: block;          
+                        margin-top: 0;
+                        align-self: center;
+                        font-weight: 700px;
+                        color: $Darkgray;
+                        width: 100%;
+                        padding: .5rem 0;
+                    }
+                }
+            }
+
+
+            button{
+                width: 75%;
+                padding: 1rem;
+                outline: none;
+                border: none;
+                color: white;
+                font: inherit;
+                font-weight: 700;
+                background-color: $Moderatecyan;
+                border-radius: 25px;
+
+                &:hover{
+                    cursor: pointer;
+                    transition: all .20s linear;
+                    background-color: $Darkcyan;
+                }
+
+                @include laptop{
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+
+    .record-container{
+        
+        text-align: center;
+        @include borderR-container();
+
+        .text-container-record{
+            @include laptop{
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 2rem;
+
+                hr{
+                    transform: rotate(90deg);
+                    width: 8%;
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2rem;
+            margin-bottom: 1.5rem;
+
+            @include laptop{
+                margin-bottom: 0;
+            }
+
+            span{
+                font-size: 1rem;
+                font-weight: 400;
+                color: $Darkgray;
+            }
+        }
+
+        hr{
+            margin-bottom: 1.5rem;
+            background-color: $ligthgray;
+            border: none;
+            height: 1px;
+            width: 30%;
+            margin-inline: auto;
+
+            @include laptop{
+                margin-bottom: 0;
+            }
+        }
+
+        .range-container{
+            height: 15px;
+            width: 100%;
+            background-color: $ligthgray;
+            border: none;
+            border-radius: 25px;
+
+            .ranges{
+                height: 15px;
+                width: 70%;
+                background-color: $Moderatecyan;
+                border-radius: 25px;
+            }
+        }
+
+    }
+
+    .about-container{
+        margin-bottom: 2rem;
+        @include borderR-container();
+        .about{
+
+            h2{
+                font-weight: 700;
+                letter-spacing: 1px;
+                margin-bottom: 2rem;
+            }
+
+            p{
+                line-height: 1.8rem;
+                color: $Darkgray;
+                font-weight: 500;
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .section{
+            border: 1px solid $ligthgray;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+
+            .title-container{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: .7rem;
+
+                @include laptop{
+                    gap: 0;
+                    justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
+                }
+
+
+                h4{
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                p{
+                    color: $Moderatecyan;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    @include laptop{
+                        margin: 0;
+                    }
+                }
+            }
+
+            p{
+                color: $Darkgray;
+                line-height: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .reward-con{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+
+                @include laptop{
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+
+                h3{
+                    font-size: 2rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    span{
+                        font-size: 1rem;
+                        color: $Darkgray;
+                        font-weight: 300;
+                        align-self: center;
+                    }
+                }
+    
+                .reward{
+                    background: $Moderatecyan;
+                    outline: none;
+                    border: none;
+                    padding: 1rem 2.5rem;
+                    border-radius: 25px;
+                    font-family: inherit;
+                    font-weight: 700;
+                    color: $white;
+                    font-size: 1rem;
+    
+                    &:hover{
+                        cursor: pointer;
+                        transition: all .20s linear;
+                        background: $Darkcyan;
+                    }
+                }
+    
+                
+            }
+            
+
+        }
+        .last-section{
+            opacity: .7;
+        
+        
+            .last-btn{
+                outline: none;
+                    border: none;
+                    padding: 1rem 2.5rem;
+                    border-radius: 25px;
+                    font-family: inherit;
+                    font-weight: 700;
+                    color: $white;
+                    font-size: 1rem;
+                    background: $Darkgray;
+                &:hover{
+                    cursor: default;
+                }
+            }
+        }
+
+    }
+
+}
+
+.blur1{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.233);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 3rem;
+
+    @include laptop{
+        display: none;
+    }
+}
+.blur{
+    display: block;
+    background: rgba(0, 0, 0, 0.233);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    @include laptop{
+        display: none;
+    }
+}
+
+
+
+
+

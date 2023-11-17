@@ -44,13 +44,19 @@ nav{
                 gap: 2rem;
                 li{
                     list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                    }
+
+                    &:hover{
+                        transition: all .20s linear;
+                        cursor: pointer;
+                        opacity: .8;
+                    }
                 }
 
-                &:hover{
-                    transition: all .20s linear;
-                    cursor: pointer;
-                    opacity: .8;
-                }
+                
             }
         }
 
@@ -66,15 +72,22 @@ nav{
             bottom: 0;
             left: 50%;
             top: 4rem;
-            width: 390px;
+            width: 90%;
             transform: translateX(-50%);
             border-radius: 15px;
             flex-direction: column;
             transition: all .50s ease-in-out;
+            z-index: 100;
 
             @include laptop{
                 display: none;
             }
+
+            @include mobile{
+                height: 90%;
+            }
+
+
 
 
 
@@ -86,6 +99,8 @@ nav{
                 align-items: center;
                 font-size: 1.3rem;
                 font-weight: 500;
+
+
 
                 &:hover{
                     transition: all .20s ease;
@@ -117,6 +132,7 @@ nav{
         .active{
             display: flex;
             animation: slideDown .50s ease-in-out;
+            z-index: 100;
             @include laptop{
                 display: none;
             }
@@ -141,7 +157,7 @@ nav{
             }
 
             .open-menu{
-                z-index: 1;
+                z-index: 100;
                 transition: all .20s ease;
                 animation: rotational .30s ease;
 
@@ -166,9 +182,9 @@ nav{
             }
             
             .active-show{
-                z-index: 1;
                 display: flex;
                 animation: rotational .50s ease;
+                z-index: 100;
                 @include laptop{
                     display: none;
                 }
