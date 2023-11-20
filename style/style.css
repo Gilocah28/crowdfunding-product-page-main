@@ -541,9 +541,9 @@ nav .navbar-container .btn-hamburger-menu .active-show {
   z-index: 3;
   padding: 1.5rem;
   max-width: 700px;
-  top: 8rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   border-radius: 15px;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
   display: none;
@@ -673,8 +673,18 @@ nav .navbar-container .btn-hamburger-menu .active-show {
   gap: 1rem;
   border-top: 1px solid hsl(0, 0%, 83%);
 }
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .pledge-count {
+    flex-direction: row;
+  }
+}
 .project-container .back-project-container .pledge-count p {
   margin: 1.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .pledge-count p {
+    flex: 1;
+  }
 }
 .project-container .back-project-container .pledge-count .pledge-container {
   display: flex;
@@ -682,6 +692,11 @@ nav .navbar-container .btn-hamburger-menu .active-show {
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .project-container .back-project-container .pledge-count .pledge-container {
+    flex: 1;
+  }
 }
 .project-container .back-project-container .pledge-count .pledge-container input {
   width: 50%;
@@ -701,6 +716,11 @@ nav .navbar-container .btn-hamburger-menu .active-show {
   background: hsl(176, 50%, 47%);
   font-weight: 500;
   letter-spacing: 1px;
+}
+.project-container .back-project-container .pledge-count .pledge-container .continue:hover {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
 }
 
 .Custom-radio-btn {
@@ -732,13 +752,14 @@ nav .navbar-container .btn-hamburger-menu .active-show {
   background: hsl(0, 0%, 100%);
   width: 90%;
   max-width: 500px;
-  top: 14rem;
+  top: 20%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   border-radius: 15px;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
   padding: 1.5rem;
   text-align: center;
+  z-index: 10;
 }
 .thankyou-container h2 {
   margin: 2rem 0;
@@ -764,7 +785,6 @@ nav .navbar-container .btn-hamburger-menu .active-show {
 }
 
 .text-container-project h3 {
-  display: none;
   cursor: pointer;
 }
 .text-container-project h3:hover {
@@ -777,4 +797,14 @@ nav .navbar-container .btn-hamburger-menu .active-show {
     align-items: center;
     gap: 1rem;
   }
+}
+
+.last-container {
+  opacity: 0.5;
+}
+.last-container .content .radio-container-flex .radio .text-container-project p {
+  color: hsl(0, 0%, 48%);
+}
+.last-container .pledge-count .pledge-container .continue {
+  background-color: hsl(0, 0%, 48%);
 }/*# sourceMappingURL=style.css.map */

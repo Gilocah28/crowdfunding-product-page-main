@@ -6,9 +6,9 @@
     z-index: 3;
     padding: 1.5rem;
     max-width: 700px;
-    top: 8rem;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
     border-radius: 15px;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
 
@@ -157,8 +157,15 @@
             gap: 1rem;
             border-top: 1px solid $ligthgray;
 
+            @include laptop{
+                flex-direction: row;
+            }
+
             p{
                 margin: 1.5rem 0;
+                @include laptop{
+                    flex: 1;
+                }
             }
             
             .pledge-container{
@@ -167,6 +174,12 @@
                 justify-content: space-between;
                 width: 100%;
                 gap: 1rem;
+
+                @include laptop{
+                    flex: 1;
+                }
+
+                
 
                 input{
                     width: 50%;
@@ -187,6 +200,12 @@
                     background: $Moderatecyan;
                     font-weight: 500;
                     letter-spacing: 1px;
+
+                    &:hover{
+                        transition: all .20s ease;
+                        cursor: pointer;
+                        background-color: $Darkcyan;
+                    }
                 }
             }
         }
@@ -225,13 +244,14 @@
     background: $white;
     width: 90%;
     max-width: 500px;
-    top: 14rem;
+    top: 20%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
     border-radius: 15px;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.12);
     padding: 1.5rem;
     text-align: center;
+    z-index: 10;
 
     h2{
         margin: 2rem 0;
@@ -263,7 +283,6 @@
 
 .text-container-project{
     h3{
-        display: none;
         cursor: pointer;
         &:hover{
             transition: all .20s linear;
@@ -274,5 +293,29 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+    }
+}
+
+
+.last-container{
+    opacity: .5;
+    .content{
+        .radio-container-flex{
+            .radio{
+                .text-container-project{
+                    p{
+                        color: $Darkgray;
+                    }
+                }
+            }
+        }
+    }
+
+    .pledge-count{
+        .pledge-container{
+            .continue{
+                background-color: $Darkgray;
+            }
+        }
     }
 }
